@@ -1,0 +1,110 @@
+@import "variables";
+@import "base";
+
+:host {
+  width: 850px;
+  color: $white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .app-title {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 11px;
+    padding-bottom: 25px;
+    animation: scaleText 2s cubic-bezier(.08,1.01,1,1);
+    backface-visibility: hidden;
+  }
+
+  .app-rules {
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    text-transform: initial;
+    animation: scaleText 2s cubic-bezier(.08,1.01,1,1);
+    backface-visibility: hidden;
+  }
+
+  .start-quiz {
+    margin-top: 20px;
+    padding: 14px 54px;
+    background-color: $white;
+    color: $green-strong;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    animation: moveFromBottomToCenter 2s cubic-bezier(.08,1.01,1,1);
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+    transition: all .2s;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px $shaddow;
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px $shaddow;
+    }
+  }
+}
+
+@keyframes scaleText {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+
+  80% {
+    opacity: 0.6;
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes moveFromTopToCenter {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottomToCenter {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
