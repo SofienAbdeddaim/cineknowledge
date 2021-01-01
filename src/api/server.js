@@ -7,7 +7,7 @@ const quizController = require('./controllers/quiz');
 
 quizController.createQuizQuestions();
 
-app.use(quizRoutes);
+app.use('/api', quizRoutes);
 
 app.listen(3000, () => {
   console.log('JSON Server is running');

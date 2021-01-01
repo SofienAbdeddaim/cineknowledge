@@ -1,2 +1,2 @@
 <app-welcome-screen *ngIf="!quizDisplayed" (startQuizEvent)="showQuiz()"></app-welcome-screen>
-<app-quiz *ngIf="quizDisplayed"></app-quiz>
+<app-quiz *ngIf="quizDisplayed" [quizQuestions]="quizQuestions"></app-quiz>
