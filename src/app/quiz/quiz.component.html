@@ -4,5 +4,5 @@
 <div class="game-over" *ngIf="timeOut">
   <span>Game over!</span>
   <span>Your Score is: {{ currentScore }}</span>
-  <button class="retry">Retry</button>
+  <button class="retry" (click)="retry()">Retry</button>
 </div>
