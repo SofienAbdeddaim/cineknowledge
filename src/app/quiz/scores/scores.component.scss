@@ -1,0 +1,55 @@
+@import "variables";
+@import "base";
+
+:host {
+
+  .score-block {
+    position: absolute;
+    margin-left: 5px;
+    right: 100px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-54;
+    border-radius: 50px;
+
+    &.best {
+      top: 100px;
+    }
+
+    &.current {
+      top: 149px;
+      right: 85px;
+    }
+
+    .label {
+      width: 60%;
+      text-align: center;
+      color: $black;
+      font-size: 21px;
+      font-weight: 700;
+      &.best-score-label {
+        padding-right: 15px;
+      }
+      &.current-score-label {
+        padding-left: 15px;
+      }
+    }
+
+    .score {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $red;
+      border-radius: 50%;
+      color: $white;
+      background-color: $alert-red;
+    }
+  }
+}
