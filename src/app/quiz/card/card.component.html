@@ -1,4 +1,4 @@
 <img class="card-block" [src]="question.imgUrl">
-<div class="yes-answer answer">YES</div>
-<div class="no-answer answer">NO</div>
-<span class="quiz-question">Did {{ question.name }} star in {{ question.possibleWrongYear }}</span>
+<div class="yes-answer answer" (click)="yesAnswer()">YES</div>
+<div class="no-answer answer" (click)="noAnswer()">NO</div>
+<span class="quiz-question">Did <span class="spacial">{{ question.name }}</span> star in <span class="spacial">{{ question.possibleWrongYear }}</span></span>

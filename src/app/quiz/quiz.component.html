@@ -1,3 +1,8 @@
-<app-countdown></app-countdown>
-<app-scores></app-scores>
-<app-card [question]="quizQuestions[0]"></app-card>
+<app-countdown (gameOverEvent)="gameOver()"></app-countdown>
+<app-scores [currentScore]="currentScore" [bestScore]="bestScore"></app-scores>
+<app-card *ngIf="!timeOut" [question]="question" (trueAnswerEvent)="trueAnswer($event)"></app-card>
+<div class="game-over" *ngIf="timeOut">
+  <span>Game over!</span>
+  <span>Your Score is: {{ currentScore }}</span>
+  <button class="retry">Retry</button>
+</div>

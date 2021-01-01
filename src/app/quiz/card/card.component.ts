@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { QuestionModel } from '../../core/models/quiz.model';
 
 @Component({
@@ -8,6 +8,15 @@ import { QuestionModel } from '../../core/models/quiz.model';
 })
 export class CardComponent {
 
+  @Output() trueAnswerEvent = new EventEmitter<boolean>();
+
   @Input() question: QuestionModel;
 
+  yesAnswer(): void {
+    this.trueAnswerEvent.emit(this.question.year === this.question.possibleWrongYear);
+  }
+
+  noAnswer(): void {
+    this.trueAnswerEvent.emit(this.question.year !== this.question.possibleWrongYear);
+  }
 }

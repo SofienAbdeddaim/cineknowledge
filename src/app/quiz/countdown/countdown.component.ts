@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
@@ -9,12 +9,16 @@ export class CountdownComponent implements OnInit {
 
   countdown = 60;
 
+  @Output() gameOverEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
     setInterval(() => {
-      if (this.countdown) {
+      if (this.countdown > 0) {
         this.countdown--;
+      } else {
+        this.gameOverEvent.emit();
       }
     }, 1000);
   }
