@@ -4,7 +4,7 @@ const prefix = require('superagent-prefix')('https://api.themoviedb.org/3');
 const config = require('config');
 const data = [];
 
-exports.getMovies = (pageNumber) => {
+exports.getMoviesByPageNumber = (pageNumber) => {
   return new Promise((resolve, reject) => {
     superagent
     .get('/movie/popular')
