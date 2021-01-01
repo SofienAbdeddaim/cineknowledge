@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  quizDisplayed = false;
   title = 'Up to you to find a great one';
+
+  showQuiz(): void {
+    this.quizDisplayed = true;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-screen',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeScreenComponent implements OnInit {
 
+  @Output() startQuizEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  startQuiz(): void {
+    this.startQuizEvent.emit();
   }
 
 }

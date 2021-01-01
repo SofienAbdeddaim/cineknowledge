@@ -16,7 +16,7 @@
     font-weight: 700;
     letter-spacing: 11px;
     padding-bottom: 25px;
-    animation: scaleText 2s cubic-bezier(.08,1.01,1,1);
+    animation: scaleText 3s linear;
     backface-visibility: hidden;
   }
 
@@ -25,7 +25,9 @@
     font-size: 17px;
     text-align: center;
     text-transform: initial;
-    animation: scaleText 2s cubic-bezier(.08,1.01,1,1);
+    animation: appear 2s cubic-bezier(.08,1.01,1,1);
+    animation-delay: 3s;
+    animation-fill-mode: both;
     backface-visibility: hidden;
   }
 
@@ -40,8 +42,8 @@
     border: none;
     outline: none;
     border-radius: 100px;
-    animation: moveFromBottomToCenter 2s cubic-bezier(.08,1.01,1,1);
-    animation-delay: 2s;
+    animation: moveFromBottomToCenter 2s linear;
+    animation-delay: 5s;
     animation-fill-mode: both;
     backface-visibility: hidden;
     transition: all .2s;
@@ -74,20 +76,17 @@
   }
 }
 
-@keyframes moveFromTopToCenter {
+@keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(-200px);
   }
 
   80% {
     opacity: 0.8;
-    transform: translateY(-10px);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
