@@ -1,0 +1,39 @@
+@import "variables";
+@import "base";
+
+:host {
+
+  .countdown-block {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-54;
+    border-radius: 50px;
+
+    .label {
+      color: $black;
+      padding-left: 15px;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .countdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 700;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $red;
+      border-radius: 50%;
+      color: $white;
+      background-color: $alert-red;
+    }
+  }
+}
