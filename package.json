@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "server": "cd src/api && node server.js",
+    "server:dev": "cd src/api && SET NODE_ENV=dev&& node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~11.0.4",
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
+    "config": "^3.3.3",
     "express": "^4.17.1",
     "rxjs": "~6.6.0",
+    "superagent": "^6.1.0",
+    "superagent-prefix": "0.0.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
